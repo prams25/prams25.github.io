@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+
+    <div class="login-page">
+        <label>Login</label>
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form">
+            <label>Username<input type="text"/></label>
+            <label>Password<input type="password"/></label>
+            <button>login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p></form><br><br>
+
+            <div class="fb-login-button" data-width="25" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false">
+                <button  onclick="myfunc()">facebook</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+</body>
