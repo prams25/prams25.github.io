@@ -26,10 +26,14 @@
             <button>login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p></form><br><br>
 
-            <div class="fb-login-button" data-width="25" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false">
-                <button  onclick="myfunc()">facebook</button>
-            </div>
+            <!-- Display login status -->
+            <div id="status"></div>
 
+            <!-- Facebook login or logout button -->
+            <a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a>
+
+            <!-- Display user profile data -->
+            <div id="userData"></div>
           </form>
         </div>
       </div>
