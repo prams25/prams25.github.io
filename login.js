@@ -1,4 +1,4 @@
-function myfunc()  {
+
   window.fbAsyncInit = function() {
     // FB JavaScript SDK configuration and setup
     FB.init({
@@ -15,19 +15,19 @@ function myfunc()  {
             getFbUserData();
         }
     });
-};
+  };
 
-// Load the JavaScript SDK asynchronously
-(function(d, s, id) {
+  // Load the JavaScript SDK asynchronously
+  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+  }(document, 'script', 'facebook-jssdk'));
 
-// Facebook login with JavaScript SDK
-function fbLogin() {
+  // Facebook login with JavaScript SDK
+  function fbLogin() {
     FB.login(function (response) {
         if (response.authResponse) {
             // Get and display the user profile data
@@ -36,7 +36,7 @@ function fbLogin() {
             document.getElementById('status').innerHTML = 'User cancelled login or did not fully authorize.';
         }
     }, {scope: 'email'});
-}
+  }
 
 // Fetch the user profile data from facebook
 function getFbUserData(){
@@ -57,5 +57,4 @@ function fbLogout() {
         document.getElementById('userData').innerHTML = '';
         document.getElementById('status').innerHTML = 'You have successfully logout from Facebook.';
     });
-}
 }
