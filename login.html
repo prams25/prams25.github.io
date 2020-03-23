@@ -21,18 +21,18 @@
             <label>Password<input type="password"/></label>
             <button>login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p></form><br><br>
+
+            <!-- Display login status -->
+            <div id="status"></div>
+
+            <!-- Facebook login or logout button -->
+            <a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a>
+
+            <!-- Display user profile data -->
+            <div id="userData"></div>
           </form>
         </div>
       </div>
-
-    <!-- Display login status -->
-    <div id="status"></div>
-
-    <!-- Facebook login or logout button -->
-    <a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a>
-
-    <!-- Display user profile data -->
-    <div id="userData"></div>
 </body>
 
 <script src="login.js"></script>
