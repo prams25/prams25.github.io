@@ -2,6 +2,7 @@
 
 <head>
     <link type="text/css" rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 
 <body>
@@ -22,38 +23,34 @@
             <p class="message">Not registered? <a href="#">Create an account</a></p></form><br><br>
 
             <!-- Facebook login or logout button -->
-            <a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a>
+            <a href="javascript:void(0);" onclick="FBLogin()" id="fbLink"><img src="fblogin.png"/></a>
 
-            <!-- Display user profile data -->
-            <div id="userData"></div>
+           
 
+            <!-- Google Login -->
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+            <meta name="google-signin-client_id" content="http://571663827648-g74hpmgg4iailsms70sn5cj2775vta3j.apps.googleusercontent.com/.apps.googleusercontent.com">
 
-      <!-- Google Login -->
-      <script src="https://apis.google.com/js/platform.js" async defer></script>
-      <meta name="google-signin-client_id" content="http://571663827648-g74hpmgg4iailsms70sn5cj2775vta3j.apps.googleusercontent.com/.apps.googleusercontent.com">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <a href="#" onclick="onSignIn();"><button>Sign in</button></a>
+            <script>
+            function onSignIn(googleUser) {
+                // Useful data for your client-side scripts:
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                console.log('Full Name: ' + profile.getName());
+                console.log('Given Name: ' + profile.getGivenName());
+                console.log('Family Name: ' + profile.getFamilyName());
+                console.log("Image URL: " + profile.getImageUrl());
+                console.log("Email: " + profile.getEmail());
 
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      <a href="#" onclick="onSignIn();"><button>Sign in</button></a>
-      <script>
-      function onSignIn(googleUser) {
-          // Useful data for your client-side scripts:
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log('Full Name: ' + profile.getName());
-          console.log('Given Name: ' + profile.getGivenName());
-          console.log('Family Name: ' + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
-
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }
-      </script>
+                // The ID token you need to pass to your backend:
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+              }
+            </script>
         </form>
         </div>
       </div>
 </body>
-
-<script src="login.js"></script>
 </html>
