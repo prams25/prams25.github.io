@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link type="text/css" rel="stylesheet" href="login.css">
+    <!--<link type="text/css" rel="stylesheet" href="login.css">-->
     <script src="login.js"></script>
 </head>
 
@@ -22,10 +22,15 @@
             <button>login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p></form><br><br>
 
+            <!-- Display login status -->
+            <div id="status"></div>
+
             <!-- Facebook login or logout button -->
             <a href="#" onclick="FBLogin()" id="fbLink"><img src="fblogin.png"/></a>
 
-           
+            <!-- Display user profile data -->
+            <div id="userData"></div>
+
 
             <!-- Google Login -->
             <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -52,11 +57,5 @@
         </form>
         </div>
       </div>
-
-      <!-- Display login status -->
-      <div id="status"></div>
-
-      <!-- Display user profile data -->
-      <div id="userData"></div>
 </body>
 </html>
