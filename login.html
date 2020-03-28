@@ -2,7 +2,7 @@
 
 <head>
     <!--<link type="text/css" rel="stylesheet" href="login.css">-->
-    <script src="login-1.js"></script>
+    <script src="login.js"></script>
 </head>
 
 <body>
@@ -30,8 +30,11 @@
             <div id="status"></div>
 
             <!-- Facebook login or logout button -->
-            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false">
-            </div>
+            <a href="#" onclick="FBLogin()" id="fbLink">
+              <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false">
+              </div>
+            </a>
+            
 
             <!-- Display user profile data -->
             <div id="userData"></div>
