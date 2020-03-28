@@ -6,10 +6,6 @@
 </head>
 
 <body>
-
-  <div id="fb-root"></div>
-  <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=593512708177952&autoLogAppEvents=1" async defer></script>
-
     <div class="login-page">
         <label>Login</label>
         <div class="form">
@@ -30,11 +26,7 @@
             <div id="status"></div>
 
             <!-- Facebook login or logout button -->
-            <a href="#" onclick="FBLogin()" id="fbLink">
-              <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false">
-              </div>
-            </a>
-            
+            <a href="#" onclick="FBLogin()" id="fbLink"><img src="fblogin.png"/></a>
 
             <!-- Display user profile data -->
             <div id="userData"></div>
